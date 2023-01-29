@@ -1,10 +1,17 @@
-import { View, Text, StyleSheet, SafeAreaView, StatusBar, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  StatusBar,
+  ScrollView,
+} from "react-native";
 import React from "react";
-import HeaderTab from "../components/HeaderTab";
-import SearchBar from "../components/SearchBar";
-import Categories from "../components/Categories";
-import RestuarantItem from "../components/RestuarantItem";
-import BottomTab from "../components/BottomTab";
+import HeaderTab from "../components/Home/HeaderTab";
+import SearchBar from "../components/Home/SearchBar";
+import Categories from "../components/Home/Categories";
+import RestuarantItem from "../components/Home/RestuarantItem";
+import BottomTab from "../components/Home/BottomTab";
 
 export default function Home() {
   return (
@@ -12,15 +19,18 @@ export default function Home() {
       <View style={{ backgroundColor: "white", padding: 15 }}>
         <HeaderTab />
         <SearchBar />
-
-        <ScrollView  showsVerticalScrollIndicator={false}>
-        <Categories/>
-        <RestuarantItem/>
+        </View>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Categories />
+          <RestuarantItem />
+          <RestuarantItem />
+          <RestuarantItem />
+          <RestuarantItem />
+          <RestuarantItem />
         </ScrollView>
 
-        <BottomTab  />
-
-      </View>
+        <BottomTab />
+    
     </SafeAreaView>
   );
 }
@@ -29,6 +39,6 @@ const styles = StyleSheet.create({
   home_container: {
     marginTop: StatusBar.currentHeight,
     backgroundColor: "#eee",
-    flex: 1,
+    flex: 1
   },
 });

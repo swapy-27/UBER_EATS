@@ -13,7 +13,7 @@ export default function RestuarantItem() {
       }}
     >
       <View style={{  position: "relative" }}>
-        <Image style={{borderRadius: 20}} source={require("../assets/images/bg1.jpg")} />
+        <Image style={{borderRadius: 20}} source={require("../../assets/images/bg1.jpg")} />
         <Ionicons
           name="heart-outline"
           size={24}

@@ -4,25 +4,25 @@ import React from "react";
 export default function Categories() {
   const items = [
     {
-      image: require("../assets/images/shopping-bag.png"),
+      image: require("../../assets/images/shopping-bag.png"),
       text: "Pick-up",
     },
     {
-      image: require("../assets/images/soft-drink.png"),
+      image: require("../../assets/images/soft-drink.png"),
       text: "Soft Drinks",
     },
     {
-      image: require("../assets/images/bread.png"),
+      image: require("../../assets/images/bread.png"),
       text: "Bakery Items",
     },
     {
-      image: require("../assets/images/fast-food.png"),
+      image: require("../../assets/images/fast-food.png"),
       text: "Fast Food",
     },
   ];
 
   return (
-    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{alignSelf:"center"}}>
       {items.map((img) => {
         return (
           <View style={{alignItems:"center", marginHorizontal:12,marginTop:10}}>
