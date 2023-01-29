@@ -4,6 +4,7 @@ import HeaderTab from "../components/HeaderTab";
 import SearchBar from "../components/SearchBar";
 import Categories from "../components/Categories";
 import RestuarantItem from "../components/RestuarantItem";
+import BottomTab from "../components/BottomTab";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <Categories/>
         <RestuarantItem/>
         </ScrollView>
+
+        <BottomTab  />
 
       </View>
     </SafeAreaView>
