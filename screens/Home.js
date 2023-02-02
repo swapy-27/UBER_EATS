@@ -13,24 +13,24 @@ import Categories from "../components/Home/Categories";
 import RestuarantItem from "../components/Home/RestuarantItem";
 import BottomTab from "../components/Home/BottomTab";
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <SafeAreaView style={styles.home_container}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
         <HeaderTab />
         <SearchBar />
-        </View>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <Categories />
-          <RestuarantItem />
-          <RestuarantItem />
-          <RestuarantItem />
-          <RestuarantItem />
-          <RestuarantItem />
-        </ScrollView>
+      </View>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Categories />
 
-        <BottomTab />
-    
+        <RestuarantItem navigation={navigation} />
+        <RestuarantItem navigation={navigation} />
+        <RestuarantItem navigation={navigation} />
+        <RestuarantItem navigation={navigation} />
+        <RestuarantItem navigation={navigation} />
+      </ScrollView>
+
+      <BottomTab />
     </SafeAreaView>
   );
 }
@@ -39,6 +39,6 @@ const styles = StyleSheet.create({
   home_container: {
     marginTop: StatusBar.currentHeight,
     backgroundColor: "#eee",
-    flex: 1
+    flex: 1,
   },
 });

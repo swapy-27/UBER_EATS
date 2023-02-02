@@ -4,7 +4,7 @@ import About from '../components/ResturantDetail/About'
 
 export default function ResturantDetails() {
   return (
-    <SafeAreaView >
+    <SafeAreaView style={{backgroundColor:"grey " , flex:1}} >
       <About/>
     </SafeAreaView>
   )

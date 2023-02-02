@@ -8,7 +8,7 @@ export default function About() {
         style={{ width: "100%", height: 200 }}
         source={require("../../assets/images/bg1.jpg")}
       />
-      <View>
+      <View style={{ backgroundColor:"white" }} >
         <Text style={{ fontWeight: "900", fontSize: 15 }}>
           Farmhouse Kitchen Thai Cuisine
         </Text>
