@@ -22,15 +22,22 @@ export default function Categories() {
   ];
 
   return (
-    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{alignSelf:"center"}}>
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      style={{ alignSelf: "center" }}
+    >
       {items.map((img) => {
         return (
-          <View style={{alignItems:"center", marginHorizontal:12,marginTop:10}}>
-            <Image
-              style={{ width: 50, height: 50 }}
-              source={img.image}
-            ></Image>
-            <Text style={{fontWeight:"800"}}>{img.text}</Text>
+          <View
+            style={{
+              alignItems: "center",
+              marginHorizontal: 12,
+              marginTop: 10,
+            }}
+          >
+            <Image style={{ width: 50, height: 50 }} source={img.image}></Image>
+            <Text style={{ fontWeight: "800" }}>{img.text}</Text>
           </View>
         );
       })}

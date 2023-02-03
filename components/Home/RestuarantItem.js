@@ -1,7 +1,9 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
-export default function RestuarantItem({ navigation }) {
+export default function RestuarantItem(props) {
+  const navigation=props.navigation;
+  const details=props.details;
   return (
     <TouchableOpacity onPress={
       ()=>{
@@ -13,14 +15,15 @@ export default function RestuarantItem({ navigation }) {
         borderRadius: 20,
         marginTop: 15,
         padding: 5,
-        backgroundColor: "#eee",
+        backgroundColor: "",
         alignItems: "center",
       }}
     >
       <View style={{ position: "relative" }}>
         <Image
           style={{ borderRadius: 20 }}
-          source={require("../../assets/images/bg1.jpg")}
+          // source={require("../../assets/images/bg1.jpg")}
+          source={({uri:details.Image})}
         />
         <Ionicons
           name="heart-outline"
@@ -43,7 +46,7 @@ export default function RestuarantItem({ navigation }) {
       >
         <View style={{ width: "80%" }}>
           <Text style={{ fontWeight: "900", fontSize: 15 }}>
-            Farmhouse Kitchen Thai Cuisine
+            {details.Name}
           </Text>
           <Text style={{ fontWeight: "900", color: "grey" }}>35-40 .min</Text>
         </View>
@@ -55,7 +58,7 @@ export default function RestuarantItem({ navigation }) {
             backgroundColor: "grey",
           }}
         >
-          <Text style={{ fontWeight: "900" }}>4</Text>
+          <Text style={{ fontWeight: "900" }}>{details.Rating}</Text>
         </View>
       </View>
     </View>
